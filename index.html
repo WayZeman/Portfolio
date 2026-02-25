@@ -2,202 +2,108 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Богдан Павленко | Персональний сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Богдан Павленко — веб-розробник. Сайти, веб-додатки та цифрові продукти для бізнесу.">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="format-detection" content="telephone=no">
+    <title>Богдан Павленко | Веб-розробник</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome для іконок соцмереж -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="photo1.jpg" alt="Богдан Павленко">
-                </div>
-                
-                <div class="hero-text">
+    <div class="bg" aria-hidden="true">
+        <div class="bg-gradient"></div>
+        <div class="bg-orbs">
+            <span class="bg-orb bg-orb-1"></span>
+            <span class="bg-orb bg-orb-2"></span>
+            <span class="bg-orb bg-orb-3"></span>
+            <span class="bg-orb bg-orb-4"></span>
+            <span class="bg-orb bg-orb-5"></span>
+        </div>
+        <div class="bg-grid"></div>
+        <canvas class="bg-particles" id="bg-particles"></canvas>
+        <div class="bg-vignette"></div>
+    </div>
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-photo-wrap">
+                        <img src="photo1.jpg" alt="Богдан Павленко" width="240" height="240" fetchpriority="high">
+                    </div>
+                    <div class="hero-cube-wrap" aria-hidden="true">
+                        <div class="cube">
+                            <div></div><div></div><div></div><div></div><div></div><div></div>
+                        </div>
+                    </div>
                     <h1 class="hero-title">Богдан Павленко</h1>
-                    
-                    <p class="hero-subtitle">
-                        Розробляю сучасні сайти, Telegram та Discord-боти, а також створюю брошури, банери й рекламні матеріали — усе, що допоможе вашому бренду виглядати впевнено та помітно.
+                    <p class="hero-role">Веб-розробник</p>
+                    <p class="hero-desc">
+                        Створюю сайти та веб-додатки для бізнесу та організацій. Сучасний стек, зручний інтерфейс, оптимізація під пристрої.
                     </p>
-                    
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/pavlenko_bogdan_/" target="_blank" rel="noopener" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://t.me/bohdan2306" target="_blank" rel="noopener" aria-label="Telegram">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                        <a href="mailto:pavlenkobogdan06@gmail.com" aria-label="Gmail">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Дивитись проєкти</a>
+                        <a href="mailto:pavlenkobogdan06@gmail.com" class="btn btn-ghost">Зв’язатись</a>
                     </div>
-                    
-                    <a href="#content" class="scroll-down" aria-label="Прокрутити вниз">
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="hero-social">
+                        <a href="https://www.instagram.com/pavlenko_bogdan_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/bohdan2306" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto:pavlenkobogdan06@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-projects">
+            <div class="container">
+                <h2 class="section-heading">Проєкти</h2>
+                <p class="section-lead">Сайти та веб-продукти, над якими працював.</p>
+                <div class="projects-grid">
+                    <a href="https://www.saveon.co.ua/" target="_blank" rel="noopener" class="card card-project">
+                        <span class="card-thumb card-thumb-saveon"><i class="fas fa-piggy-bank"></i></span>
+                        <div class="card-body">
+                            <h3 class="card-title">Saveon</h3>
+                            <p class="card-text">Застосунок для ведення заощаджень та реалізації цілей. Можливість додати партнера для спільних цілей.</p>
+                            <span class="card-link">Відкрити <i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </div>
+                    </a>
+                    <a href="https://14orb.co.ua/" target="_blank" rel="noopener" class="card card-project">
+                        <span class="card-thumb card-thumb-orb"><i class="fas fa-shield-halved"></i></span>
+                        <div class="card-body">
+                            <h3 class="card-title">14 ОРБ</h3>
+                            <p class="card-text">Сайт 14-го окремого розвідувального батальйону.</p>
+                            <span class="card-link">Відкрити <i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </div>
+                    </a>
+                    <a href="https://lost-chronicles.site/" target="_blank" rel="noopener" class="card card-project">
+                        <span class="card-thumb card-thumb-lost"><i class="fas fa-gamepad"></i></span>
+                        <div class="card-body">
+                            <h3 class="card-title">Lost Chronicles</h3>
+                            <p class="card-text">Сайт Minecraft-сервера та спільноти.</p>
+                            <span class="card-link">Відкрити <i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </div>
+                    </a>
+                    <a href="https://alinapavlenko.neocities.org" target="_blank" rel="noopener" class="card card-project">
+                        <span class="card-thumb card-thumb-pava"><i class="fas fa-spa"></i></span>
+                        <div class="card-body">
+                            <h3 class="card-title">PAVA</h3>
+                            <p class="card-text">Сайт масажного салону. Послуги, контакти, карта. м. Дубно.</p>
+                            <span class="card-link">Відкрити <i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </div>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="content" class="content-section">
-        <div class="container">
-            <h2 class="section-title">Корисні сервіси</h2>
-            <p class="content-subtitle">
-                Тут зливи різних корисних сервісів, якими я користуюсь сам. 
-                Перевірені інструменти для роботи, навчання та творчості.
-            </p>
-            
-            <div class="telegram-preview">
-                <div class="telegram-widget">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" 
-                            data-telegram-post="materialsyou/3" 
-                            data-width="100%" 
-                            data-userpic="false"></script>
-                </div>
-            </div>
-            
-            <div class="content-cta">
-                <a href="https://t.me/materialsyou" target="_blank" rel="noopener" class="join-channel-btn">
-                    <i class="fab fa-telegram"></i>
-                    <span>Переглянути всі зливи</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="support" class="support-section">
-        <div class="container">
-            <h2 class="section-title">Підтримати</h2>
-            <p class="support-text">
-                Якщо вам подобається те, що я роблю, ви можете підтримати мене. 
-                Ваша підтримка допомагає створювати ще більше цікавих проєктів! ☕
-            </p>
-            
-            <div class="support-methods">
-                <div class="support-card">
-                    <div class="support-icon monobank-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3 class="support-method-title">Monobank</h3>
-                    <p class="support-description">Підтримати через банку Monobank</p>
-                    <a href="https://send.monobank.ua/jar/4ninNBneNA" target="_blank" rel="noopener" class="support-button monobank-btn">
-                        <i class="fas fa-heart"></i> Підтримати
-                    </a>
-                </div>
-
-                <div class="support-card">
-                    <div class="support-icon paypal-icon">
-                        <i class="fab fa-paypal"></i>
-                    </div>
-                    <h3 class="support-method-title">PayPal</h3>
-                    <p class="support-description">Підтримати через PayPal</p>
-                    <a href="https://www.paypal.com/paypalme/pavlenkobogdan06" target="_blank" rel="noopener" class="support-button paypal-btn">
-                        <i class="fas fa-donate"></i> Підтримати
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Богдан Павленко. Всі права захищено.</p>
+            <p class="footer-copy">&copy; <span id="current-year"></span> Богдан Павленко</p>
         </div>
     </footer>
-
-    <div id="snow-canvas-wrap">
-        <canvas id="snow-canvas"></canvas>
-    </div>
-
-    <style>
-        #snow-canvas-wrap,
-        #snow-canvas {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 9999;
-        }
-        #snow-canvas {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-
-    <script>
-        (() => {
-            const canvas = document.getElementById('snow-canvas');
-            const ctx = canvas.getContext('2d', { alpha: true });
-            const DPR = Math.min(window.devicePixelRatio || 1, 2);
-            let w, h, particles;
-
-            const PARTICLE_DENSITY = 0.00025; // густина частинок
-            const MIN_SIZE = 1;
-            const MAX_SIZE = 3;
-
-            function resize() {
-                w = window.innerWidth;
-                h = window.innerHeight;
-                canvas.width = w * DPR;
-                canvas.height = h * DPR;
-                canvas.style.width = w + 'px';
-                canvas.style.height = h + 'px';
-                ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-                initParticles();
-            }
-
-            function initParticles() {
-                const count = Math.max(40, Math.floor(w * h * PARTICLE_DENSITY));
-                particles = Array.from({ length: count }, () => makeParticle(true));
-            }
-
-            function makeParticle(randomY = false) {
-                const size = rand(MIN_SIZE, MAX_SIZE);
-                return {
-                    x: Math.random() * w,
-                    y: randomY ? Math.random() * h : -size,
-                    size,
-                    alpha: rand(0.15, 0.5),
-                    speedY: rand(15, 35) / 60, // px per frame
-                    drift: rand(-0.2, 0.2),    // плавний зсув по X
-                };
-            }
-
-            function rand(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-
-            function draw() {
-                ctx.clearRect(0, 0, w, h);
-                for (let p of particles) {
-                    p.y += p.speedY;
-                    p.x += p.drift;
-                    if (p.y > h || p.x < -10 || p.x > w + 10) {
-                        Object.assign(p, makeParticle(false));
-                        p.x = Math.random() * w;
-                    }
-                    ctx.globalAlpha = p.alpha;
-                    ctx.fillStyle = '#fff';
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.size / 2, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-                requestAnimationFrame(draw);
-            }
-
-            window.addEventListener('resize', resize, { passive: true });
-            resize();
-            requestAnimationFrame(draw);
-        })();
-    </script>
 
     <script src="script.js"></script>
 </body>
